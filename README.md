@@ -1,2 +1,2 @@
 # learning.Angular
- Ejercicios de aprendizaje del framework
+ Ejercicios de aprendizaje del framework Angular
