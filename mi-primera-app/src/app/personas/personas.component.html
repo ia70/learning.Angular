@@ -9,7 +9,8 @@
             <app-persona></app-persona>
 
             <label>Titulo persona</label>
-            <input type="text" class="form-control" (input)="modificarTitulo($event)">
+            <input type="text" class="form-control" 
+            [(ngModel)]="titulo">
             {{titulo}}
         </div>
     </div>
