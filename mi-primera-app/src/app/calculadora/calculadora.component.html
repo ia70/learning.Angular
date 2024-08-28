@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Aplicación de Calculadora</h1>
+    <br>
+    <div class="mb-3">
+        <label for="num1" class="form-label" >Operando A</label>
+        <input type="number" id="num1" class="form-control" placeholder="Operando A" (input)="setNum1($event)" />
+        <label for="num2" class="form-label">Operando B</label>
+        <input type="number" id="num2" class="form-control" placeholder="Operando B" (input)="setNum2($event)" />
+        <br>
+        <button type="button" class="btn btn-primary" (click)="getResultado()">
+            Sumar
+        </button>
+        <br>
+        Resultado: {{resultado}}
+
+    </div>
+
+</div>
