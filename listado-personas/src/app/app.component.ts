@@ -20,5 +20,4 @@ export class AppComponent {
   agregarPersona(){
     this.personas.push(new Persona(this.nombreInput, this.apellidoInput));
   }
-
 }
