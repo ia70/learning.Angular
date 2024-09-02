@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <br>
+  <div class="mb-3">
+      <app-formulario 
+        (SetNum1)="setNum1($event)"
+        (SetNum2)="setNum2($event)"
+        (Sumar)="sumar()"
+      />
+      <br>
+      <app-resultado [suma]="resultado" />
+  </div>
+</div>
