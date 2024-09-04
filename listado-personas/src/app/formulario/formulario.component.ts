@@ -5,18 +5,25 @@ import { PersonasService } from '../personas.service';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css'
+  styleUrl: './formulario.component.css',
 })
 export class FormularioComponent {
   @ViewChild('nombreInput') nombreInput: ElementRef;
   @ViewChild('apellidoInput') apellidoInput: ElementRef;
 
-  constructor(private personasService: PersonasService) {}
+  constructor(private personasService: PersonasService,) {
+    personasService.saludar.subscribe(
+      (indice: number) => alert("El indice es: " + indice)
+    );
+  }
 
   agregarPersona() {
     let persona: Persona;
-    persona = new Persona(this.nombreInput.nativeElement.value, this.apellidoInput.nativeElement.value);
-    
+    persona = new Persona(
+      this.nombreInput.nativeElement.value,
+      this.apellidoInput.nativeElement.value
+    );
+
     this.personasService.agregarPersona(persona);
   }
 }
