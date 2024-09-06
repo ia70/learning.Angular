@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Persona } from '../persona.model';
 import { PersonasService } from '../personas.service';
 
