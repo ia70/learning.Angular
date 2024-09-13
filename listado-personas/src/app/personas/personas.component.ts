@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona.model';
 import { PersonasService } from '../personas.service';
 import { Router } from '@angular/router';
@@ -8,16 +8,22 @@ import { Router } from '@angular/router';
   templateUrl: './personas.component.html',
   styleUrl: './personas.component.css',
 })
-export class PersonasComponent {
-  personas: Persona[];
+export class PersonasComponent implements OnInit{
+  personas: Persona[] = [];
 
   constructor(
     private personasService: PersonasService,
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    this.personas = this.personasService.personas;
+  ngOnInit(){
+    this.personasService.obtenerPersonas()
+    .subscribe(
+      (personas: Persona[]) => {
+        this.personas = personas;
+        this.personasService.setPersonas(personas);
+      }
+    );
   }
 
   agregar() {
