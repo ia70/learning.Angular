@@ -4,6 +4,7 @@ import {
   DecimalPipe,
   JsonPipe,
   LowerCasePipe,
+  NgFor,
   PercentPipe,
   SlicePipe,
   TitleCasePipe,
@@ -19,19 +20,13 @@ import { RouterOutlet } from '@angular/router';
     RouterOutlet,
     DatePipe,
     CurrencyPipe,
-    LowerCasePipe,
-    UpperCasePipe,
-    PercentPipe,
-    DecimalPipe,
-    TitleCasePipe,
-    JsonPipe,
-    SlicePipe
+    NgFor
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'movies-webapp';
+  title = 'Datos de la pelicula';
   
   peliculas = [
     {
